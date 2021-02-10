@@ -29,6 +29,13 @@ describe('calculator', () => {
     cy.get('#operator_equals').click();
     cy.get('.display').should('contain', '10')
   })
+  it('should have the expected output for a positive number', () => {
+    cy.get('#number5').click();
+    cy.get('#operator_add').click();
+    cy.get('#number2').click();
+    cy.get('#operator_equals').click();
+    cy.get('.display').should('contain', '7')
+  })
   it('should have the expected output for a negative number', () => {
     cy.get('#number3').click();
     cy.get('#operator_subtract').click();

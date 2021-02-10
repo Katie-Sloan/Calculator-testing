@@ -64,12 +64,12 @@ export default {
             this.multiply(this.runningTotal);
             break;
           case "/":
-            if (this.runningTotal === 0) {
-              runningTotal === "Error"
-            } 
-            else {
+            // if (this.runningTotal === 0) {
+            //   runningTotal === "Error"
+            // } 
+            // else {
               this.divide(this.runningTotal)
-            };
+            // };
             break;
         }
       }
@@ -97,8 +97,8 @@ export default {
       this.runningTotal = parseFloat(this.previousTotal) * parseFloat(number);
     },
     divide(number) {
-      if (number === "0") {
-        this.runningTotal = 'Error'
+      if (parseFloat(number) == 0) {
+        this.runningTotal = ('Error');
       }
       else {
       this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
